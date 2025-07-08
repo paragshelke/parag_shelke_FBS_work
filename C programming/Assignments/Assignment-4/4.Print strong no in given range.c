@@ -2,26 +2,24 @@
 
 void main() 
 {
-    int n, i, num, temp, digit, sum, fact;
+    int n;
 
     printf("Enter the range n: ");
     scanf("%d", &n);
 
-    printf("Strong numbers between 1 and %d are:\n", n);
-
-    for (i = 1; i <= n; i++) 
+    for (int i = 1; i <= n; i++) 
 	{
-        num = i;
-        sum = 0;
-        temp = num;
+      int  temp = i;
+      int  sum = 0;
+        
 
         while (temp > 0)
 		 {
-            digit = temp % 10;
+            int r = temp % 10;
 
            
-            fact = 1;
-            for (int j = 1; j <= digit; j++)
+             int fact = 1;
+            for (int j = 1; j <= r; j++)
 			 {
                 fact = fact * j;
             }
@@ -30,9 +28,9 @@ void main()
             temp = temp / 10;
         }
 
-        if (sum == num)
+        if (sum == i)
 		 {
-            printf("%d\n", num);
+            printf("%d ", i);
         }
     }
 }

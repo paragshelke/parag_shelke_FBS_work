@@ -1,32 +1,30 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 void main()
  {
-    int n, i, j, x;
+    int n;
 
     printf("Enter the range n: ");
     scanf("%d", &n);
 
-    printf("Prime numbers between 1 and %d are:\n", n);
-
-    for (i = 2; i <= n; i++) 
+     for (int i = 2; i <= n; i++) 
 	{ 
-        j = 2;
-        x = 1; 
-
+       int flag = 0;
+		 
+ 		int	j = 2;
         while (j <= i / 2)
 		 {
             if (i % j == 0)
 			 {
-                x = 0; 
+                flag = 1; 
                 break;
             }
             j++;
         }
 
-        if (x == 1)
+        if (flag == 0)
 		 {
-		 printf("%d\n",i);	
+		 printf("%d ",i);	
 		 
 	}
     }

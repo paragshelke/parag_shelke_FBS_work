@@ -2,19 +2,17 @@
 
 void main()
  {
-    int n, i, sum, j;
+    int n ;
 
     printf("Enter the range n: ");
     scanf("%d", &n);
 
-    printf("Perfect numbers between 1 and %d are:\n", n);
-
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
 	 {
-        j = 1;
-        sum = 0;
-
         
+       int sum = 0;
+
+        int j = 1;
         while (j < i)
 		 {
             if (i % j == 0) 
@@ -26,7 +24,7 @@ void main()
 
         if (sum == i) 
 		{
-            printf("%d\n", i);
+            printf("%d ", i);
         }
     }
 }
