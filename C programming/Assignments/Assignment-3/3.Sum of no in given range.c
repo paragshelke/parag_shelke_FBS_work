@@ -2,15 +2,19 @@
 
 void main()
 {	
+	int a,b;
+	printf("enter a range a and b ");
+	scanf("%d%d",&a,&b);
+	
 	int sum=0;
- 	int a=1;
+ 	int i=a;
 	 
-	while(a<=5)
+	while(i<=b)
 	{
 	
-	sum=sum + a;
+	sum=sum + i;
 	
-	a++;	
+	i++;	
 	}
 	 printf("Sum = %d", sum);	
 }
