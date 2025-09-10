@@ -1,0 +1,79 @@
+Name - parag
+Set - A
+
+Q1.
+--->select name,salary from employees
+order by salary desc;
+
+Q2.
+--->select * fro employees
+order by salary desc limit 5;
+
+Q3.
+--->select * from employees
+limit 3,5;
+
+Q4.
+--->select department,count(*) from employees
+    group by department;
+
+Q5.
+--->select department,avg(salary) from employees
+group by department
+having avg(salary)>50000;
+
+Q6.
+--->select * from product
+where product_name like %Laptop% ;
+
+Q7.
+--->select left("student_name",3) from students
+
+
+Q8.
+--->select * from students 
+where student_name like A%;
+
+Q9.
+--->select count(*) from orders
+where no_orders>100
+group by month(order_date);
+
+Q10.
+--->select sum(sales_amount),avg(sales_amount) from sales
+group by category
+having sum(sales_amount)>100000;
+
+Q11.
+--->a) 
+
+Q12.
+--->b)
+
+Q13
+--->c)
+
+Q14.
+--->b)
+
+Q15.
+--->b)
+
+Q16
+--->select c.region,count(o.total_amount) as total_orders from orders as o
+inner join customer as c
+on c.customer_id=o.customers_id
+group by c.region
+having count(o.total_amount)>10000;
+
+
+Q17.
+--->select b.author_id,count(s.quantity) as total_books_sold from books as b
+inner join sales as s
+on b.book_id=s.book_id
+group by b.author_id
+having count(quantity)>100;
+
+
+
+ 
